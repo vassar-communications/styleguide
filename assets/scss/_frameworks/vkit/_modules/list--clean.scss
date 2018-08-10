@@ -1,0 +1,12 @@
+/*
+	$VASSAR-LISTCLEAN__item-space: 0.2em;	
+*/
+
+.list--clean {
+	padding-left: 0;
+
+	li {
+		list-style: none;
+		margin: $VASSAR-LISTCLEAN__item-space;
+	}
+}

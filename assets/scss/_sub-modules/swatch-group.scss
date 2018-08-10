@@ -1,0 +1,23 @@
+.swatch-group {
+	.color-swatch {
+		border: none;
+		max-height: 3em;
+		overflow: hidden;
+		padding: 1em;
+	    transition: 0.25s ease all;
+
+		@media (hover: none) {
+			max-height: none;
+			overflow: visible;
+		}
+	    
+	    strong {
+		    @extend .subtitle;
+		    margin-bottom: 1em;
+	    }
+
+		&:hover {
+			max-height: 10em;
+		}
+	}
+}

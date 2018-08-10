@@ -1,0 +1,16 @@
+.assortment {
+	border: 1px solid $border-color;
+	border-radius: $border-radius;
+	
+	.assortment-item {
+		padding: 2em;
+	}
+	
+	& > * {
+		border-bottom: 1px solid $border-color;
+
+		&:last-child {
+			border: none;
+		}
+	}
+}

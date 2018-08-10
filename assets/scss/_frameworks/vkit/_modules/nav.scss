@@ -1,0 +1,13 @@
+/*	This module contains some basic nav styling that I use in all our sites. 
+	
+	//	current nav item color	
+	$VASSAR-NAV__item-color--current: #f00;
+
+*/
+
+.u-NavSite {
+	padding: 2rem;
+}
+.u-NavSite__item--isCurrent {
+	color: $VASSAR-NAV__item-color--current;
+}

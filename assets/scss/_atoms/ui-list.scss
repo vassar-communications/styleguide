@@ -1,0 +1,16 @@
+.ui-list {
+	margin: 1em 0;
+	padding: 0;
+	
+	.ui-list__item {
+		list-style: none;
+		margin-bottom: 0;
+		padding: $ui-list__item-padding 0;
+		
+		.ui-list__link {
+			display: inline-block;
+			margin: -$ui-list__item-padding 0;
+			padding: $ui-list__item-padding 0;			
+		}
+	}
+}

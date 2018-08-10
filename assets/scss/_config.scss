@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('https://cmspreview.vassar.edu/styleguide/web/assets/fonts/icomoon.eot?358z47');
+  src:  url('https://cmspreview.vassar.edu/styleguide/web/assets/fonts/icomoon.eot?358z47#iefix') format('embedded-opentype'),
+    url('https://cmspreview.vassar.edu/styleguide/web/assets/fonts/icomoon.ttf?358z47') format('truetype'),
+    url('https://cmspreview.vassar.edu/styleguide/web/assets/fonts/icomoon.woff?358z47') format('woff'),
+    url('https://cmspreview.vassar.edu/styleguide/web/assets/fonts/icomoon.svg?358z47#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	&:before {
+		/* use !important to prevent issues with browser extensions that change fonts */
+		font-family: 'icomoon' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+
+
+
+$image_path: "https://cmspreview.vassar.edu/styleguide/web/assets/images";
+
+$green: #3b0;
+$red: #e50;
+
+
+/*	Color
+	----- */
+
+/* Primary colors */
+$VC__vassarBurgundy: #861f41;
+$VC__vassarGray: #746661;
+
+/* Alumnae/i colors */
+$VC__alumPink: #F2D4D7;
+$VC__alumGray: #d5d1cf;
+
+/* Web colors */
+$VC__vassarVeryLightGray: #f8f7f6;
+$VC__vassarLightGray: #F0EEEB;
+$VC__vassarTextGray: #BFB9B0;
+$VC__vassarLinkPink: #ce1e46;
+$VC__vassarDullPink: #935966;
+$VC__vassarCharcoal: #5A5A5A;
+
+/* Other colors */
+$VC__vassarBlue-lighter: #a6d8ff;
+$VC__vassarBlue-light: #66bdff;
+$VC__vassarBlue: #0091ff;
+$VC__vassarBlue-dark: #007ad9;
+$VC__vassarBlue-darker: #0066b5;
+
+$VC__vassarGreen-lighter: #a0e53e;
+$VC__vassarGreen-light: #8acc36;
+$VC__vassarGreen: #74b32d;
+$VC__vassarGreen-dark: #689928;
+$VC__vassarGreen-darker: #567f21;
+
+$VC__vassarYellow-lighter: #fff7c9;
+$VC__vassarYellow-light: #fff480;
+$VC__vassarYellow: #ffea00;
+$VC__vassarYellow-dark: #ffd000;
+$VC__vassarYellow-darker: #cca700;
+
+/* Athletics colors */
+$VC__athleticsMaroon: #75101d;
+$VC__athleticsBurgundy: #ac0032;
+$VC__athleticsGray: #7b7b7b;
+
+
+$borderRadius: 0.2em;
+
+
+$VC__vassarOrange: #f63;
+
+
+
+/*	Typography
+	---------- */
+
+$sans-serif: "stevie-sans", Helvetica, Arial, sans-serif;
+$serif: Georgia, Times, serif;
+$monospace: "source-code-pro", mono;
+
+$BASICSTYLE__h1: bold 1.4em $sans-serif;
+$BASICSTYLE__h2: 300 1.8em $sans-serif;
+$BASICSTYLE__h3: bold 0.9em $sans-serif;
+$BASICSTYLE__h4: bold 1em $sans-serif;
+$BASICSTYLE__h5: bold 0.9em $sans-serif;
+$BASICSTYLE__h6: bold 0.8em $sans-serif;
+$BASICSTYLE__p: 300 1.1em/1.46 $sans-serif;
+$BASICSTYLE__li: 300 1.1em/1.4 $sans-serif;
+$BASICSTYLE__blockquote: $sans-serif 0.9em;
+$BASICSTYLE__defaulttext-color: $VC__vassarCharcoal;
+$BASICSTYLE__link-color: $VC__vassarBlue;
+$BASICSTYLE__link-color--hover: $VC__vassarLinkPink;
+$BASICSTYLE__selection-color: $VC__vassarLightGray;
+$BASICSTYLE__link-color--visited: #999;
+$BASICSTYLE__link-color--active: $VC__vassarCharcoal;
+
+$maincontainer-maxwidth: 44em;
+
+$VASSAR-NAV__item-color--current: #f00;
+$VASSAR-FOOTER__site-font: normal 1em $sans-serif;
+$VASSAR-LISTCLEAN__item-space: 0.2em;
+
+$VASSAR-SEARCH__itemTitle-font: bold 1em $sans-serif;
+$VASSAR-SEARCH__itemTitle-color-normal: #444;
+$VASSAR-SEARCH__itemTitle-color-visited: #aaa;
+$VASSAR-SEARCH__itemTitle-color-hover: #f00;
+$VASSAR-SEARCH__item-font: normal 1em $sans-serif;
+$VASSAR-SEARCH__itemUrl-font: normal 0.8em $sans-serif;
+
+$fontSize-xs: .8em;
+$fontSize-s: .9em;
+$fontSize-m: 1em;
+$fontSize-l: 1.2em;
+$fontSize-xl: 1.4em;
+$fontSize-xxl: 1.6em;
+
+$paragraph-lowerMargin: 1em;
+
+$body_container: ".PageContent";
+
+
+/*	Layout
+	------ */
+
+$figure--image-margin: 0;
+$figure--image-padding: 0;
+
+$width-standard: 32em;				/*	For a Stories-like layout where the content is in one centered
+										column, width-standard determines the max width of a 
+										standard content block. (Doesn't apply to a typical 
+										nav-content-sidebar 3col layout.) 
+									*/
+$width-wide: 38em;
+$width-xwide: 48em;
+
+
+
+
+/*	Breakpoints
+	----------- */
+
+$tiny: 25em; /* 400px divided by 16px */
+$small: 37.5em; /* 600px divided by 16px */
+$medium: 50em; /* 800px divided by 16px */
+$large: 62.5em; /* 1000px divided by 16px */
+$xlarge: 70em;
+
+$breakpoints: $tiny, $small, $medium, $large;
+
+$border-color: #ccc;
+$module-border: 1px solid $border-color;
+$card-padding: 1.2em;
+$border-radius: 0.2em;
+$dropshadow: 0 2px 4px #eee;
+
+$ui-list__item-padding: 0.2em;
+
+
+/*	Text */
+
+$font--lighter-color: #888;
+
+

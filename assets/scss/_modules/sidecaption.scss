@@ -1,0 +1,45 @@
+/*	
+	
+*/
+
+.figureWithSidecaption {
+	border: 1px solid #aaa;
+    padding: 2em;
+    margin-bottom: 2em;
+
+	@include medium() {
+		display: flex;
+	}
+	
+	&.image--portrait {
+		.u-Figure {
+			@include medium() {
+				margin-right: 3em;
+				width: 33%;
+			}
+		}
+		.figureWithSidecaption__caption {
+			@include medium() {
+				width: 66%;
+			}
+		}
+	}
+}
+
+
+
+.figureWithSidecaption__caption {
+	ul {
+		margin: 0;
+		padding: 0;		
+	}
+	h3 {
+		font-size: 0.8em;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+	li {
+		font-size: 0.9em;
+		list-style: none;
+	}
+}

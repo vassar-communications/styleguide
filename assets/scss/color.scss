@@ -1,0 +1,339 @@
+
+
+// http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
+
+@function set-text-color($color) {
+	@if (lightness($color) > 60) {
+		@return #000000; // Lighter background, return dark color
+	} @else {
+		@return #ffffff; // Darker background, return light color
+	}
+}
+
+@mixin light-text() {
+	&, *, *:before {
+		color: #fff !important;
+	}
+	.works--no {
+		opacity: 0.6;
+	}
+}
+@mixin dark-text() {
+	&, *, *:before {
+		color: #000 !important;
+	}
+	.works--no {
+		opacity: 0.4;
+	}
+}
+
+
+/*	Using a mixin automatically determines which text
+	color provides the strongest contrast
+*/
+@mixin create_inline_swatch($color) {
+	background: $color;
+	color: set-text-color($color);
+}
+
+
+
+
+.background--vassarBurgundy {
+	@include colorcard(#861f41);
+	@include light-text();
+}
+.background--vassarGray {
+	@include colorcard(#746661);
+	@include light-text();
+}
+
+
+.background--alumPink {
+	@include colorcard($VC__alumPink);
+	@include light-text();
+}
+.background--alumGray {
+	@include colorcard($VC__alumGray);
+}
+
+
+.bg-gray {
+	background: #eee;
+}
+
+/*	Web colors */
+	
+.background--vassarVeryLightGray {
+	@include colorcard(#f8f7f6);
+	@include dark-text();
+}
+.background--vassarLightGray {
+	@include colorcard(#F0EEEB);
+	@include dark-text();
+}
+.background--vassarTextGray {
+	@include colorcard(#BFB9B0);
+	@include light-text();
+}
+
+
+.background--vassarLinkPink {
+	@include colorcard(#ce1e46);
+	@include light-text();
+}
+.background--vassarDullPink {
+	@include colorcard(#935966);
+	@include light-text();
+}
+.background--vassarCharcoal {
+	@include colorcard(#5A5A5A);
+	@include light-text();
+}
+
+.background--vassarBurgundy-dark {
+	@include colorcard(#53172b);
+	@include light-text();
+}
+
+
+/*	Athletics colors */
+
+.background--athleticsMaroon {
+	@include colorcard($VC__athleticsMaroon);
+}
+.background--athleticsBurgundy {
+	@include colorcard($VC__athleticsBurgundy);
+}
+.background--athleticsGray {
+	@include colorcard($VC__athleticsGray);
+}
+
+
+
+/*	Other colors */
+
+.background--vassarBlue-normal {
+	background: $VC__vassarBlue;
+	@include light-text();
+}
+.background--vassarBlue-light {
+	background: #66bdff;
+	@include dark-text();
+}
+.background--vassarBlue-lighter {
+	background: #a6d8ff;
+	@include dark-text();
+}
+.background--vassarBlue-dark {
+	background: #007ad9;
+	@include light-text();
+}
+.background--vassarBlue-darker {
+	background: #0066b5;
+	@include light-text();
+}
+
+
+.background--vassarGreen-normal {
+	background: #74b32d;
+	@include light-text();
+}
+.background--vassarGreen-light {
+	background: #8acc36;
+	@include light-text();
+}
+.background--vassarGreen-lighter {
+	background: #a0e53e;
+	@include dark-text();
+}
+.background--vassarGreen-dark {
+	background: #689928;
+	@include light-text();
+}
+.background--vassarGreen-darker {
+	background: #567f21;
+	@include light-text();
+}
+
+
+.background--vassarYellow-normal {
+	background: #ffea00;
+	@include dark-text();
+}
+.background--vassarYellow-light {
+	background: #fff480;
+	@include dark-text();
+}
+.background--vassarYellow-lighter {
+	background: #fff7c9;
+	@include dark-text();
+}
+.background--vassarYellow-dark {
+	background: #ffd000;
+	@include dark-text();
+}
+.background--vassarYellow-darker {
+	background: #cca700;
+	@include light-text();
+}
+
+
+
+/*	Patterns
+	======== */
+	
+/*	Large patterns
+	-------------- */
+
+.pattern--large-dots-black {
+	background: url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/polkadots-black.png);
+	background-size: 2em;
+}
+.pattern--large-dots-white {
+	background: #000 url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/polkadots-white.png);
+	background-size: 2em;
+}
+.pattern--large-dots-white-on-lightgray {
+	background: #000 url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/polkadots-white-on-lightgray.png);
+	background-size: 2em;
+}
+
+.pattern--large-dots-pink-on-burgundy {
+	background: #000 url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/polkadots-pink-on-burgundy.png);
+	background-size: 2em;
+}
+.pattern--large-dots-darkgray-on-charcoal {
+	background: #000 url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/polkadots-darkgray-on-charcoal.png);
+	background-size: 2em;
+}
+
+
+.pattern--vc-gray {
+	background: #000 url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/vc-gray.png);
+	background-size: 8em;
+}
+
+
+
+.pattern--polkadots-small-gray {
+	background: url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/polkadots-small-gray.png);
+	background-size: 2em;
+}
+.pattern--polkadots-small-pink-on-burgundy {
+	background: url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/polkadots-small-pink-on-burgundy.png);
+	background-size: 2em;
+}
+
+
+
+
+.pattern--large-dots-gray {
+	@include colored-dots(#00f);
+}
+.pattern--acorns-verylightgray {
+	background: url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/acorns-verylightgray.png);
+	background-size: 8em;
+}
+.pattern--acorns-white {
+	background: #F0EEEB url(https://cmspreview.vassar.edu/styleguide/web/assets/images/patterns/acorns-white.png);
+	background-size: 8em;
+}
+	
+/*	Small patterns
+	-------------- */
+
+.pattern--diag-dark-gray {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARElEQVQoU2Pcv3PDf0f3AEYGHAAkD5LCqQAkCVOEVyGyIpCNWE1EV4TVRGyKMBTiUoSiEJ8iuEJCisAKiVGEopBQoAMAWrotgAyw1tEAAAAASUVORK5CYII=);
+	background-size: 5px;
+}
+.pattern--diag-light-gray {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMUlEQVQoU2NkQAMf3r3+DxISEBJlRJZC4aBrorFCkJvQ3YPN3YxEK8TnARp7htgABwD8PRebwkGbHQAAAABJRU5ErkJggg==);
+	background-size: 5px;
+}
+.pattern--dots-dark-gray {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMUlEQVQoU2NkQAP7d274DxJydA9gRJZC4aBrorFCkJvQ3YPN3YxEK8TnARp7htgABwABYhZZYFQsPwAAAABJRU5ErkJggg==);
+	background-size: 5px;
+}
+.pattern--dots-light-gray {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMUlEQVQoU2NkQAMf3r3+DxISEBJlRJZC4aBrorFCkJvQ3YPN3YxEK8TnARp7htgABwD8PRebwkGbHQAAAABJRU5ErkJggg==);
+	background-size: 5px;
+}
+
+.swatch--link-charcoal {
+	@include create_inline_swatch(#5a5a5a);
+}
+.swatch--link-blue {
+	@include create_inline_swatch($VC__vassarBlue);
+}
+.swatch--link-gray {
+	@include create_inline_swatch(#999);
+}
+.swatch--link-pink {
+	@include create_inline_swatch(#ce1e46);
+}
+
+
+
+a {
+	border: none;
+	text-decoration: underline;
+}
+
+
+.link--regular {
+	color: $BASICSTYLE__link-color !important;
+	
+	&:hover {
+		color: $BASICSTYLE__link-color--hover !important;
+		cursor: pointer;
+	}
+	&:active {
+		color: $BASICSTYLE__link-color--active !important;
+	}
+}
+.link--visited {
+	color: $BASICSTYLE__link-color--visited !important;
+	
+	&:hover {
+		color: $BASICSTYLE__link-color--hover !important;
+		cursor: pointer;
+	}
+	&:active {
+		color: $BASICSTYLE__link-color--active !important;
+	}
+}
+
+
+.u-lFooter {
+	background: $VC__vassarVeryLightGray;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARElEQVQoU2P88O71fwEhUUYGHAAkD5LCqQAkCVOEVyGyIpCNWE1EV4TVRGyKMBTiUoSiEJ8iuEJCisAKiVGEopBQoAMAWqgvY18yiVgAAAAASUVORK5CYII=);
+    background-size: 5px;	
+
+	margin-top: 6em;
+	padding: 4em;
+	
+	@include fullWidth();
+}
+
+
+
+.u-NavSite__item {
+	&:link,
+	&:visited {
+		color: #333;
+	}
+	&:hover,
+	&:visited:hover {
+		color: $VC__vassarLinkPink;
+	}
+}
+
+
+
+
+
+
+
+
+

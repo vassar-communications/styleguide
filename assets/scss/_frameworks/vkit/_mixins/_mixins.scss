@@ -1,0 +1,32 @@
+@mixin VKIT__horizontal-nav(
+	$hnav__item-spacing, 
+	$hnav__item-padding,
+	$hnav__itemcontainer: ".u-NavSite__itemContainer"
+	) {
+	margin: 0;
+	padding: 0;
+
+	#{$hnav__itemcontainer} {
+		display: inline;
+		list-style: none;
+		margin-right: $hnav__item-spacing;
+		
+		.u-NavSite__item {
+			display: inline-block;
+			padding: $hnav__item-padding;
+		}
+	}
+}
+
+@mixin fullWidth() {
+	@media screen and (min-width: $maincontainer-maxwidth) {
+		margin-left: calc(-1 * ((100vw - #{$maincontainer-maxwidth}) / 2));
+		width: 100vw;
+	}
+}
+
+@mixin medium() {
+	@media screen and (min-width: $medium) {
+		@content;
+	}
+}

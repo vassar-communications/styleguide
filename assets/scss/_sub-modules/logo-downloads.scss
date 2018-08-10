@@ -1,0 +1,11 @@
+.downloads {
+	.figureHasSidecap {
+		.caption {
+			margin-top: 1em;
+
+			@include medium() {
+				margin-top: 0;
+			}
+		}
+	}
+}

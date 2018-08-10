@@ -1,0 +1,33 @@
+@import "_config";
+
+@import "~basictools";
+
+@mixin outline-text($outline-color:#fff, $outline-size:2px) {
+    text-shadow: 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color, 0 0 $outline-size $outline-color;
+    
+    &::-moz-selection { text-shadow: none; }
+	&::selection { text-shadow: none; }
+}
+
+@import "shared-mixins";
+
+@import "_tools/_all";
+@import "_frameworks/_all";
+
+@import "_layouts/_all";
+
+
+@import "x_atoms/_all";
+@import "x_molecules/_all";
+
+
+@import "_atoms/_all";
+@import "_sub-modules/_all";
+
+@import "_modules/_all";
+@import "_sections/_all";
+@import "_vendor/_all";
+
+@import "layout";
+@import "typography";
+@import "color";

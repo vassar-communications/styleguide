@@ -1,0 +1,17 @@
+/*	This is for items that offer downloads (like logos)
+	
+	.grid ul li {
+    list-style: none;
+}
+
+*/
+
+
+.list--downloads {
+	@include unBulletedList();
+	
+	.listItem {
+	    font-size: 0.9em;
+	    margin-bottom: 0.1em;
+	}
+}

@@ -1,0 +1,92 @@
+
+/*	Right now, the situation is: we have a mix of the old and the new. Both the vassarbar and the standard site markup contain a search form and a "Vassar" link. I'm using both at different screen sizes: I use the standard site markup for the mobile header, and the vassarbar markup at larger screen sizes.
+	
+This should be solved when the vassarbar is swapped for the megamenu, and the site markup is updated. */
+
+#{$body_container} {
+	.u-Search {
+		display: none;
+	}
+}
+.vassarbar {
+	.u-Masthead__vassar--link {
+		display: none;
+		
+		@include small() {
+			display: block;
+		}
+	}
+}
+
+
+@include small() {
+
+	.u-Masthead__vassar--link {
+		font-family: "goudy-old-style", serif;
+		font-weight: 100;
+		font-size: 1.4em;
+		color: #fff;
+	
+		svg {
+			display: none;
+		}
+	}
+	.vassarbar {
+		.u-Masthead__vassar {
+			margin: 0;
+			
+			.u-Masthead__vassar--link {
+				color: #fff;
+			}
+		}
+	}
+	#navigation:target {
+		z-index: 2;
+	}
+
+	.u-lHeader {
+		.u-Masthead__vassar {
+			display: none;
+		}
+	}
+	.vassarbar {
+		background: $VC__vassarBurgundy;
+		padding: 0.6em;
+	    position: relative;
+	    z-index: 9;
+	
+		.u-Masthead__vassar {
+			background: $VC__vassarBurgundy;
+		}
+		.u-Masthead__vassar--link {
+			color: #fff;
+			text-decoration: none;
+		}
+		.icon-search svg,
+		.icon-search svg:visited {
+			fill: #fff;
+		}
+
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+			height: 5rem;			
+		}
+
+
+		.u-Search {
+			right: 1em;
+
+			.u-Search__button {
+				width: 1.4em;
+				height: 1.4em;
+				top: 0.8em;
+			}
+		}
+	}
+}
+
+
+.u-Masthead__vassar {
+	font-size: 1.8rem !important;
+}
+
+

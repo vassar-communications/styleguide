@@ -1,0 +1,7 @@
+/*	This changes the icon size, because of border-box stuff:
+	https://vassar.slack.com/archives/C02GQU5U0/p1516122038000903
+*/
+
+.u-Search__button, .u-Search__cancel, .u-Search__submit {
+    box-sizing: border-box;
+}

@@ -1,0 +1,44 @@
+/*
+
+<div class="twocol-header-content">
+  <div class="item">
+	  <h3 class="header">A header</h3>
+	  <div class="content">Ya ya yaya</div>
+  </div>
+  <div class="item">
+	  <h3 class="header">A header</h3>
+	  <div class="content">Ya ya yaya</div>
+  </div>
+  <div class="item">
+	  <h3 class="header">A header</h3>
+	  <div class="content">Ya ya yaya</div>
+  </div>
+</div>
+
+*/
+
+.twocol-header-content {
+	.item {
+		border-bottom: 1px solid #eee;
+		padding: 1em 0;
+
+		@include medium() {
+			display: flex;
+		}
+			
+		.header {
+			*:first-child {
+				margin-top: 0;
+			}
+			padding-right: 2em;
+			@include medium() {
+				width: 36%;
+			}
+		}
+		.content {
+			@include medium() {
+				width: 64%;
+			}
+		}
+	}	
+}

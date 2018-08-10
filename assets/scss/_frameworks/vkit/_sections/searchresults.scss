@@ -1,0 +1,117 @@
+/*
+	Search results
+	==============
+	
+	font: font-style font-variant font-weight font-size/line-height font-family
+
+	$VASSAR-SEARCH__itemTitle-font: bold 1em/1.2 $serif;
+	$VASSAR-SEARCH__item-font: normal 1em/1.2 $serif;
+	$VASSAR-SEARCH__itemUrl-font: normal 0.9em/1.2 $sans-serif;
+
+	$VASSAR-SEARCH__itemTitle-color-normal: #000;
+	$VASSAR-SEARCH__itemTitle-color-visited: #888;
+	$VASSAR-SEARCH__itemTitle-color-hover: #f00;
+*/
+
+/* previous styling */
+// #cse {
+	
+	.gs-result .gs-title, .gs-result .gs-title * {
+		font: unset !important;
+		color: unset !important;
+	}
+	.gs-result .gsc-table-result .gs-title .gs-title {
+		
+		b {
+			background: #ff0 !important;
+			font: unset !important;
+		}
+		
+		font: $VASSAR-SEARCH__itemTitle-font !important;
+		@include linkColors($VASSAR-SEARCH__itemTitle-color-normal, $VASSAR-SEARCH__itemTitle-color-visited, $VASSAR-SEARCH__itemTitle-color-hover, $VASSAR-SEARCH__itemTitle-color-hover);
+	}
+	.gsc-tabHeader.gsc-inline-block.gsc-tabhActive,
+	.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-short {
+		display: none;
+	}
+	.gs-bidi-start-align.gs-snippet {
+		font: $VASSAR-SEARCH__item-font !important;
+	}
+	.gsc-table-cell-thumbnail.gsc-thumbnail {
+		width: 20%;
+		
+		.gs-web-image-box, .gs-promotion-image-box {
+			
+		}
+	}
+	.gsc-url-bottom {
+		margin-top: 0.3em;
+
+		.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-long {
+			font: $VASSAR-SEARCH__itemUrl-font !important;
+			
+			&:hover {
+				color: unset !important;
+			}
+		}
+	}
+	img.gs-image {
+		width: 100%;
+	}
+	.gs-snippet:hover {
+		color: unset !important;
+	}
+
+	.gsc-results .gsc-cursor-box .gsc-cursor-page {
+		border: none;
+		text-decoration: none;
+		text-align: center;
+		max-width: 2.8rem;
+	}
+	
+	
+	.gs-web-image-box,
+	.gs-promotion-image-box {
+		width: auto !important;
+	}
+	.gs-web-image-box img.gs-image,
+	.gs-promotion-image-box img.gs-promotion-image {
+		max-width: none !important;
+	}
+	.gsc-thumbnail {
+		padding-right: 1em !important;
+	}
+	
+	/* We don't show the term people searched for. We should.
+		
+		This search box shows the term, but it's hidden for some reason.
+		
+		
+	.gsc-control-cse .gsc-control-wrapper-cse .gsc-search-box {
+		display: block !important;
+	}
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+.card {
+	border: $module-border;
+	border-radius: $border-radius;
+	padding: $card-padding;
+	box-shadow: $dropshadow;
+	overflow: hidden;
+	
+	*:last-child {
+		margin-bottom: 0;
+	}
+
+	.edge-to-edge {
+		margin-left: -$card-padding;
+		margin-right: -$card-padding;
+		
+		&:first-child {
+			margin-top: -$card-padding;
+		}
+		&:last-child {
+			margin-bottom: -$card-padding;
+		}
+	}
+	.wide-field {
+		margin-left: -1em;
+		margin-right: -1em;
+
+		&:first-child {
+			margin-top: -1em;
+		}
+		&:last-child {
+			margin-bottom: -1em;
+		}
+	}
+	
+	pre {
+		@extend .wide-field;
+		@extend .wrap;
+		padding: 0.4em;
+		font-size: 0.7em;
+	}
+}

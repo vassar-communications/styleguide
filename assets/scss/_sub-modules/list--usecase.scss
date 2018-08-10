@@ -1,0 +1,10 @@
+.list--usecase {
+	.ui-list__item {
+		@extend .util-font-verysmall;
+		color: #444;
+		
+		&.works--no {
+			color: #aaa;
+		}
+	}
+}

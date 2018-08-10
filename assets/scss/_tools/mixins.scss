@@ -1,0 +1,147 @@
+@mixin colorcard($hue) {
+	background: $hue !important;
+	border-color: darken($hue, 5%) !important;
+}
+@mixin linkColors($link, $visited, $hover, $active) {
+	&:link {
+		color: $link;
+	}
+	&:visited {
+		color: $visited;
+	}
+	&:hover, &:visited:hover {
+		color: $hover;
+	}
+	&:active, &:visited:active {
+		color: $active;
+	}
+}
+@mixin unBulletedList() {
+	padding-left: 0;
+	margin: 0;
+	
+	li {
+		list-style: none;
+	}
+}
+@mixin very-nice-underlines($underlinecolor, $bgcolor, $border-space:tight) {
+	text-shadow: .03em 0 $bgcolor, -.03em 0 $bgcolor, 0 .03em $bgcolor, 0 -.03em $bgcolor, .06em 0 $bgcolor, -.06em 0 $bgcolor, .09em 0 $bgcolor, -.09em 0 $bgcolor, .12em 0 $bgcolor, -.12em 0 $bgcolor, .15em 0 $bgcolor, -.15em 0 $bgcolor;
+	text-decoration: none;
+	// textShadowToCropUnderline backgroundColor
+	background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient($underlinecolor, $underlinecolor);
+	background-size: .05em 1px, .05em 1px, 1px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+
+	@if $border-space == tight {
+		background-position: 0% 84%, 100% 84%, 0% 84%;
+	}
+	@else if $border-space == "loose" {
+		background-position: 0% 94%, 100% 94%, 0% 94%;
+	}
+	else {
+		background-position: 0% #{$border-space}, 100% #{$border-space}, 0% #{$border-space};		
+	}
+	&:before, &:after, *, *:before, *:after {
+		text-shadow: none;
+	}
+	&::-moz-selection {
+		@include no-nice-underlines();
+		background: $BASICSTYLE__selection-color;
+	}
+	&::selection {
+		@include no-nice-underlines();
+		background: $BASICSTYLE__selection-color;
+	}
+}
+@mixin no-nice-underlines() {
+	background-image: none;
+	text-shadow: none;
+}
+@mixin hover_state($hoverstatecolor--bg, $hoverstatecolor--text) {
+	&:hover, &:visited:hover {
+		background: $hoverstatecolor--bg;
+		color: $hoverstatecolor--text;
+	}
+}
+@mixin ext-border($border_style, $width, $offset, $placement:"below", $position:"left") {
+	& {
+		position: relative;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		border-top: $border_style;
+		width: $width;
+
+		@if $placement == 'above' {
+			top: 0;
+			top: $offset;
+		}
+		@if $placement == 'below' {
+			bottom: 0;
+			bottom: $offset;
+		}
+
+		@if $position == 'left' {
+			left: 0;
+		}
+		@if $position == 'center' {
+			left: calc(50% - (#{$width}/2));
+		}
+		@if $position == 'right' {
+			right: 0;
+		}
+	}
+}
+@mixin inlinelist() {
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline;
+		list-style: none;
+	}
+}
+@mixin multiCols($cols) {
+	-webkit-column-count: $cols;
+	-moz-column-count: $cols;
+	column-count: $cols;
+}
+@mixin transition($property:all, $duration:0.25s, $timingfnc:linear, $delay:0s) {
+	transition: $property $duration $timingfnc $delay;
+}
+@mixin small() {
+    @media screen and (min-width: $small) {
+        @content;
+    }
+}
+@mixin medium() {
+    @media screen and (min-width: $medium) {
+        @content;
+    }
+}
+@mixin large() {
+    @media screen and (min-width: $large) {
+        @content;
+    }
+}
+@mixin xlarge() {
+    @media screen and (min-width: $xlarge) {
+        @content;
+    }
+}
+
+@mixin shift($property, $values...) {
+  @for $i from 1 to (length($breakpoints)+1) {
+    @media screen and (min-width: nth($breakpoints, $i)) {
+      #{$property}: nth($values, $i);
+    }
+  }
+}
+/* .example {
+  @include shift("margin",
+  1em 2em,
+  0,
+  4em 0,
+  1em 2em);
+}
+*/

@@ -1,0 +1,31 @@
+.u-Masthead__siteName {
+	margin: 5em 0 1em 0;
+
+	@include shift("margin",
+	5em 0 1em 0,
+	0,
+	0,
+	0);
+
+	@include small() {
+		font-size: 1em;
+	}
+}
+.u-Masthead__siteName--link {
+	display: inline-block;
+	border-bottom: 3px solid $VC__vassarCharcoal;
+	padding-bottom: 1em;
+	text-decoration: none;
+	
+	&:link, &:visited {
+		color: $VC__vassarCharcoal;
+	}
+	
+	&:hover, &:visited:hover {
+		border-color: $VC__vassarLinkPink;
+		color: $VC__vassarLinkPink;
+	}
+}
+
+.example {
+}

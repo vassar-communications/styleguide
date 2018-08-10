@@ -1,0 +1,26 @@
+.colorswatch {
+	margin-left: 1.4em;
+	position: relative;
+
+	&:before {
+	    content: "";
+	    width: 1em;
+	    background: #f00;
+	    height: 100%;
+	    left: -1.2em;
+	    position: absolute;
+	    border-radius: 0.2em;
+	}
+	&.swatch--linkpink:before {
+		background: $VC__vassarLinkPink;
+	}
+	&.swatch--dullpink:before {
+		background: $VC__vassarDullPink;
+	}
+	&.swatch--charcoal:before {
+		background: $VC__vassarCharcoal;
+	}
+	&.swatch--red:before {
+		background: #f00;
+	}
+}

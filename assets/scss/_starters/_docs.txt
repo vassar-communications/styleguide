@@ -1,0 +1,7 @@
+STARTERS
+========
+
+This contains templates that are meant to be modified. To use:
+
+ - Copy the desired layout to the main scss directory
+ - Modify as needed

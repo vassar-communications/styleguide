@@ -1,0 +1,14 @@
+.tag {
+	background: #eee;
+	border-radius: $border-radius;
+	display: inline-block;
+	padding: 0.2em 0.4em;
+	text-decoration: none;
+
+	&:link {
+		color: #444;
+	}
+	&:hover, &:visited:hover {
+		background: #ddd;
+	}
+}

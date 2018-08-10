@@ -1,0 +1,57 @@
+$color-fyi: $VC__vassarBlue;
+$color-important: #f63;
+
+.sidenote {
+	background: $VC__vassarVeryLightGray;
+	border-left: 0.3em solid $VC__vassarLightGray;
+	margin: 2em 0;
+	padding: 2em;
+	
+	ul, ol {
+		padding-left: 1em;
+	}
+	p, li {
+		font-size: 0.9em;
+		font-weight: normal;
+		opacity: 0.8;		
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+	
+	*:last-child {
+		margin-bottom: 0;
+	}
+	.item__title {
+
+		font-size: 0.84em;
+
+		@include medium() {
+			display: inline-block;
+			float: left;
+			margin-right: 1em;
+		}
+	}
+	.sidenote__watermark {
+		mix-blend-mode: multiply;
+	}
+	.u-Figure:last-of-type {
+		margin: 0;
+	}
+	
+	&.note--fyi {
+		border-color: $color-fyi;
+		
+		.item__title {
+			color: $color-fyi;
+		}
+	}
+	&.note--important {
+		border-color: $color-important;
+		
+		.item__title {
+			color: #e53;
+		}		
+	}
+}

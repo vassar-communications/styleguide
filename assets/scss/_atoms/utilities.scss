@@ -1,0 +1,28 @@
+.util {
+	&-font-small, &-font-verysmall {
+		font-weight: normal;
+		* {
+			//	prevent compounding
+			font-size: 1em;
+		}
+	}
+	&-font-verysmall {
+		font-size: $fontSize-xs;
+	}
+	&-font-small {
+		font-size: $fontSize-s;
+	}
+	&-margin-around-block {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}	
+}
+.green {
+	color: $green;
+}
+.red {
+	color: $red;
+}
+.font--serif {
+	font-family: $serif;
+}

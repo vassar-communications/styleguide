@@ -1,0 +1,48 @@
+/*
+	Search results
+	==============
+	
+	font: font-style font-variant font-weight font-size/line-height font-family
+
+	$VASSAR-SEARCH__itemTitle-font: bold 1em/1.2 $serif;
+	$VASSAR-SEARCH__item-font: normal 1em/1.2 $serif;
+	$VASSAR-SEARCH__itemUrl-font: normal 0.9em/1.2 $sans-serif;
+
+	$VASSAR-SEARCH__itemTitle-color-normal: #000;
+	$VASSAR-SEARCH__itemTitle-color-visited: #888;
+	$VASSAR-SEARCH__itemTitle-color-hover: #f00;
+*/
+
+
+#cse {
+	.gs-title {
+		font: $VASSAR-SEARCH__itemTitle-font !important;
+		@include linkColors($VASSAR-SEARCH__itemTitle-color-normal, $VASSAR-SEARCH__itemTitle-color-visited, $VASSAR-SEARCH__itemTitle-color-hover, $VASSAR-SEARCH__itemTitle-color-hover);
+	}
+	.gsc-tabHeader.gsc-inline-block.gsc-tabhActive,
+	.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-short {
+		display: none;
+	}
+	.gs-bidi-start-align.gs-snippet {
+		font: $VASSAR-SEARCH__item-font !important;
+	}
+	.gsc-table-cell-thumbnail.gsc-thumbnail {
+		width: 30%;
+	}
+	.gsc-url-bottom {
+		margin-top: 0.3em;
+	}
+	.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-long {
+		font: $VASSAR-SEARCH__itemUrl-font !important;
+	}
+	img.gs-image {
+		width: 100%;
+	}
+	.gs-snippet:hover {
+		color: unset !important;
+	}
+
+
+
+
+}

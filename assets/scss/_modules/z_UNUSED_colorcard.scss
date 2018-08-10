@@ -1,0 +1,106 @@
+.colordeck {
+
+	@media screen and (min-width: $small) {
+		display: flex;
+		flex-flow: wrap;
+	}
+
+	.colorcard__info {
+		padding: 1em;
+		
+		.colorcard__title {
+			margin-top: 0;
+			font-size: 0.9em;
+		}
+	}
+	.colorcard__swatch {
+		background: #eee;
+		height: 4em;
+	    border: 1px solid #eee;
+	    margin-left: -1px;
+	    margin-right: -1px;
+	    margin-top: -1px;
+		border-top-left-radius: $borderRadius;
+		border-top-right-radius: $borderRadius;
+	}
+	.colorcard {
+		$card-spacing: 0.6em;
+	    border: 1px solid #ccc;
+		border-radius: $borderRadius;
+		box-shadow: 0 2px 4px #eee;
+
+		@media screen and (min-width: $small) {
+		    margin: 0 #{$card-spacing} #{$card-spacing} 0;
+		    width: calc(50% - #{$card-spacing});
+		}
+		@media screen and (min-width: $medium) {
+		    width: calc(33% - #{$card-spacing});
+		}
+	}
+	.colorcard__list {
+		@include unBulletedList();
+
+		.listItem {
+			font: normal 0.8em $sans-serif;
+		}
+		
+	}
+	.colorcard__references {
+		margin-bottom: 0.6em;
+		
+		.item__value {
+			font-family: $monospace;
+			font-weight: normal;
+		}
+		.listItem {
+			margin: 0;
+		}
+	}
+	.colorcard__guidelines {
+		.listItem {
+			font-size: 0.7em;
+			
+			&.works--yes:before,
+			&.works--no:before {
+			    width: 0.8em;
+			    display: inline-block;				
+				margin-right: 0.4em;
+			}
+			&.works--yes:before {
+				content: "\2714";
+				color: #3b0;
+			}
+			&.works--no {
+				color: #aaa;
+			}
+			&.works--no:before {
+				content: "\2718";
+				color: #e50;
+			}
+		}
+	}
+
+	.colorcard__instructions {
+		font-size: 0.8em;
+		font-style: italic;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

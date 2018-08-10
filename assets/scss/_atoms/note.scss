@@ -1,0 +1,38 @@
+.note {
+    background: #f8f7f6;
+    border-left: 0.3em solid #F0EEEB;
+    padding: 2em;
+
+	@extend .util-margin-around-block;
+    
+    p {
+	    margin-top: 0;
+	    
+	    &:last-child {
+		    margin-bottom: 0;
+	    }
+    }
+    
+    .title {
+		display: inline-block;
+		float: left;
+		font-size: 0.9em;
+		margin-right: 1em;
+		text-transform: uppercase;
+    }
+    
+    &.important {
+	    border-color: #f63;
+	    
+	    .title {
+		    color: #e53;
+	    }
+    }
+    &.info {
+	    border-color: #337bff;
+	    
+	    .title {
+		    color: #337bff;
+	    }
+    }
+}

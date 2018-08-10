@@ -1,0 +1,142 @@
+body {
+	max-width: none;
+}
+html {
+	padding: 0;
+}
+
+
+#{$body_container} {
+    max-width: $maincontainer-maxwidth;
+    margin: 0 auto;
+/*    position: relative; */
+	position: static;
+}
+
+.PageContentInner {
+	padding: 2em;
+	padding-top: 0;
+	
+	@include large() {
+		padding: 0;
+	}
+}
+
+.u-lMain {
+	padding: 0;
+	width: 100%;
+	float: none;
+	
+	@include small() {
+		margin-top: 8em;
+	}
+}
+.u-lAside {
+	display: none;
+}
+.u-lContent {
+	float: none;
+	padding: 0;
+	width: 100%;
+}
+.u-lHeader {
+	padding: 0;
+
+	@include small() {
+		position: absolute;
+		top: 9em;
+		left: 2em;
+	}
+	@include xlarge() {
+		top: 8em;
+		right: 2em;
+	}
+}
+.u-NavSite {
+	padding: 0;
+
+		@include small() {
+		padding: 0;
+		position: absolute;
+		top: 9em;
+		right: 2em;
+	}
+	@include xlarge() {
+		top: 8em;
+		right: 2em;
+	}
+}
+
+
+
+
+@include small() {
+	.u-NavSite__itemContainer {
+		font-size: 1em;
+
+		@include large() {
+			display: inline;
+		}
+		
+		.u-NavSite__item {
+			padding: 0 0.4em 0.4em 0;
+			
+			@include large() {
+				display: inline-block;
+			}
+			margin-right: 0.8em;
+		}
+	}
+	
+	.u-NavSite__item.u-NavSite__item--isCurrent {
+		font-weight: bold;
+
+		@include large() {
+			font-weight: normal;
+		    border-bottom: 1px solid #000;
+		    padding-bottom: 0.8em;
+	    }
+	}
+}
+
+.u-NavSite {
+	@include small() {
+		width: 50%;
+	}	
+	@include medium() {
+		width: 40%;
+	}	
+	@include large() {
+		width: auto;
+	}
+}
+
+
+.u-NavSite__level {
+	@include small() {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	@include large() {
+		display: block;
+	}
+}
+
+.u-NavSite__itemContainer {
+	@include small() {
+//		width: 33%;
+	}
+	@include large() {
+		width: unset;
+	}
+}
+
+
+
+
+
+
+
+
+
+

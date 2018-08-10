@@ -1,0 +1,28 @@
+/*	This is for figures where the caption needs to appear on the side, and
+	needs to contain markup. Example: on the Logos page, the horizontal logos are
+	contained in these figures. 
+*/
+
+.figureHasSidecap {
+	border: 1px solid $VC__vassarTextGray;
+	margin-top: -1px;
+	padding: 3em;
+
+	@include medium() {
+		display: flex;
+	}
+	.u-Figure {
+		margin: 0;
+
+		@include medium() {
+			width: 66%;
+		}
+	}
+	.caption {
+		@include medium() {
+			margin-left: 1em;
+			padding-left: 1em;
+			width: 33%;
+		}
+	}
+}

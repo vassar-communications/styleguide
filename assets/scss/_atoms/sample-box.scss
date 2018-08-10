@@ -1,0 +1,12 @@
+.sample {
+	@extend .util-margin-around-block;
+	border: $module-border;
+	padding: $card-padding;
+	
+	.item__title {
+	    margin-top: -2.2em !important;
+	    display: block;
+	    margin-bottom: 1.2em;
+	    @include outline-text(#fff, 4px);
+	}
+}
